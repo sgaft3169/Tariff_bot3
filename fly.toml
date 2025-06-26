@@ -1,0 +1,17 @@
+app = "tariff-bot"
+primary_region = "ams"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PYTHONUNBUFFERED = "1"
+  BOT_TOKEN = "${BOT_TOKEN}"
+  ADMIN_ID = "${ADMIN_ID}"
+  CHANNEL_ID = "${CHANNEL_ID}"
+
+[experimental]
+  auto_rollback = true
+
+[processes]
+  app = "python bot.py"
